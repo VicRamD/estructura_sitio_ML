@@ -1,9 +1,25 @@
 body {
+    background-color: #ebebeb;
+}
+
+header, footer, main {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*Header*/
+header {
     background-color: #EAC926;
 }
 
 nav ul{
     list-style-type: none;
+}
+
+nav ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li a {
@@ -36,7 +52,48 @@ header p {
 
 
 .searchbar {
+    margin: 5px;
     background-color: white;
+    color: lightgrey;
     border: solid lightgrey;
+}
+
+p.lupa{
     display: inline;
+    color: black;
+}
+
+.contendor {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-menu {
+    border-radius: 5px;
+    background-color: #03264C;
+    border: solid #03264C;
+    color: white;
+}
+
+/*Main*/
+main section {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+/*Footer*/
+footer {
+    background-color: white;
+}
+
+footer section {
+    margin-top: 1px;
+    text-align: center;
+}
+
+footer section i {
+    margin-bottom: 10px;
+    color: blue;
+    font-size: 2em;
 }
