@@ -3,13 +3,18 @@ body {
 }
 
 header, footer, main {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*Header*/
 header {
     background-color: #EAC926;
+}
+
+#logo {
+    height: 100;
+    width: 150px;
 }
 
 nav ul{
@@ -96,4 +101,8 @@ footer section i {
     margin-bottom: 10px;
     color: blue;
     font-size: 2em;
+}
+
+footer section h4 {
+    font-family: 'Roboto', sans-serif;
 }
