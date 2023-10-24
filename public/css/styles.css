@@ -81,11 +81,28 @@ p.lupa{
 }
 
 /*Main*/
+main {
+    margin: auto;
+    width: 90vw;
+}
+
+article {
+    margin: 10px;
+}
+
+article div {
+    border-top: #ebebeb solid 1px;
+    background-color: white;
+    border-right: 15px;
+    border-left: 15px;
+}
+
+/*
 main section {
     margin-left: 10px;
     margin-right: 10px;
     background-color: white;
-}
+} */
 
 /*Footer*/
 footer {
@@ -105,4 +122,34 @@ footer section i {
 
 footer section h4 {
     font-family: 'Roboto', sans-serif;
+}
+
+/*Phone*/
+@media (min-width: 361px){
+    article div h4 {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+/*tablet y laptop*/
+@media (min-width: 769px){
+    article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article div h4 {
+        display: block;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    div.contendor {
+        display: none;
+    }
 }
