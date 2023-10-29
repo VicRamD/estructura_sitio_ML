@@ -16,6 +16,8 @@ h3{
 p{
     font-size: 12px;
 }
+
+/* header */
 div.top-header{
     padding: 5%;
 }
@@ -78,6 +80,14 @@ div.burger-menu i{
     padding: 10px;
     width: 40px;
 }
+
+/*
+-
+-
+-
+-
+-
+*/
 
 .price{
     font-size: 18px;
@@ -151,7 +161,7 @@ article div.main-article{
     flex-wrap: wrap;
 }
 
-/*Clase 20*/
+/*De la Clase número 20 del curso*/
 .product-desc-box > .product-delivery-icon{
     display: block;
     font-size: 16px;

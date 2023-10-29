@@ -1,6 +1,29 @@
+/* General */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+/* 
+-
+-
+-
+-
+*/
 
 header, footer, main {
     padding-top: 10px;
@@ -8,53 +31,65 @@ header, footer, main {
 }
 
 /*Header*/
+div.top-header{
+    padding: 5%;
+}
+
 header {
     background-color: #EAC926;
 }
 
-#logo {
-    height: 100;
-    width: 150px;
+header div.logo{
+    width: 50%;
+    padding: 10px;
 }
 
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* nav */
+header nav{
+    font-size: 12px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+
+/*
 nav ul{
     list-style-type: none;
 }
+
 
 nav ul {
     margin: 0; 
     padding: 0;
     list-style: none;
-}
+}*/
 
 nav ul li a {
     text-decoration: none;
+    color: #000;
 }
-
-nav ul li a:hover {
-    text-decoration: none;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-p.descuentos {
-    font-size: 16px;
-}
-
-h4.descripcion {
-    font-size: 16px;
-}
-
-p.precio {
-    font-size: 18px;
-}
-
-header p {
-    text-align: center;
-}
-
 
 .searchbar {
     margin: 5px;
@@ -63,39 +98,130 @@ header p {
     border: solid lightgrey;
 }
 
+/*
 p.lupa{
     display: inline;
     color: black;
-}
+} */
 
-.contendor {
-    display: flex;
-    justify-content: center;
-}
+/* fin nav 
+-
+-
+-
+*/
 
-.burger-menu {
+
+div.burger-menu {
     border-radius: 5px;
     background-color: #03264C;
-    border: solid #03264C;
-    color: white;
+    /*border: solid #03264C;
+    background-color: #0044AA; */
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+    margin: auto;
+}
+
+
+/*
+-
+-
+-
+-
+-
+*/
+/* banner */
+
+section.banner img{
+    width: 100%;
 }
 
 /*Main*/
 main {
-    margin: auto;
+    margin: 0 auto;
     width: 90vw;
+    /*width: 90%*/
 }
 
-article {
-    margin: 10px;
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
 }
 
-article div {
+main section article img{
+    width: 100%;
+}
+
+main section article i{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*article div {
     border-top: #ebebeb solid 1px;
     background-color: white;
     border-right: 15px;
     border-left: 15px;
 }
+
+article {
+    margin: 10px;
+}*/
+
+.price {
+    font-size: 18px;
+    width: 25%;
+}
+
+.discount {
+    width: 70%;
+    /*border: solid 2px;*/
+}
+
+.discount, .description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3, .description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+h4.descripcion {
+    font-size: 16px;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
 
 /*
 main section {
@@ -103,6 +229,32 @@ main section {
     margin-right: 10px;
     background-color: white;
 } */
+
+.product-desc-box > .product-delivery-icon{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.product-desc-box {
+    position: relative;
+}
+
+/*
+-
+-
+-
+-
+-
+*/
 
 /*Footer*/
 footer {
@@ -124,19 +276,117 @@ footer section h4 {
     font-family: 'Roboto', sans-serif;
 }
 
+/*
+-
+-
+-
+-
+-
+*/
+
+
 /*Phone*/
 @media (min-width: 361px){
-    article div h4 {
-        display: none;
+    /*header*/
+    .top-header {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     header nav {
         display: none;
     }
+
+    div.logo, div.form {
+        width: 50%;
+    }
+
+    div.form {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-header p {
+        width: 100%;
+    }
+
+    /*main*/
+    article div h4 {
+        display: none;
+    }
+
+    main section article .description{
+        display: block;
+    }
+
+    /*main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    } */
+
+    div.products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .price {
+        font-size: 18px;
+        width: 35%;
+    }
+    
+    .discount {
+        width: 60%;
+        /*border: solid 2px;*/
+    }
 }
 
-/*tablet y laptop*/
+/*tablet*/
 @media (min-width: 769px){
+    /*header*/
+    header nav {
+        display: block;
+    }
+
+    header {
+        padding-bottom: 1%;
+    }
+
+    .top-header {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    header div.top-header div.logo{
+        width: 40%;
+    }
+
+    header div.top-header p {
+        width: 40%;
+    }
+
+    header div.top-header div.form {
+        width: 20%;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul{
+        display: flex;
+        width: 38%;
+        justify-content: space-around;
+    }
+
+    header nav ul li{
+        margin: 1%
+    }
+    
+    div.burger-menu {
+        display: none;
+    }
+
+    /*main*/
     article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -145,11 +395,37 @@ footer section h4 {
         display: block;
     }
 
-    header nav {
-        display: block;
+    div.products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    div.contendor {
-        display: none;
+    div.products article {
+        width: 48%;
+    }
+
+}
+
+/* pc */
+@media (min-width: 1280px){
+    div.products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    div.products article {
+        width: 22%;
+    }
+    .price{
+        width: 40%;
+        /*border: solid 2px;*/
+    
+    }
+    
+    .discount {
+        width: 60%;
+        /*border: solid 2px;*/
     }
 }
