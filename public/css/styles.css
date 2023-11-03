@@ -149,6 +149,8 @@ main {
 main section article{
     background-color: #fff;    
     margin: 10px 0px;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
 }
 
 main section article img{
@@ -199,7 +201,7 @@ article {
     font-weight: normal;
 }
 
-h3, .description{
+h3 {
     color: #666;
 }
 
@@ -242,6 +244,13 @@ main section {
     position: absolute;
     right: 20px;
     top: -15px;
+    transform: rotate(0deg);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.product-desc-box > .product-delivery-icon:hover {
+    transform: rotate(-90deg);
 }
 
 .product-desc-box {
@@ -316,12 +325,19 @@ footer section h4 {
     }
 
     main section article .description{
+        color: #FFF;
         display: block;
+        transition-property: color;
+        transition-duration: 0.5s;
     }
 
-    /*main section article{
+    main section article .description:hover {
+        color: #666;
+    }
+
+    main section article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    } */
+    }
 
     div.products {
         display: flex;
@@ -387,9 +403,6 @@ footer section h4 {
     }
 
     /*main*/
-    article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
 
     article div h4 {
         display: block;
@@ -405,6 +418,23 @@ footer section h4 {
         width: 48%;
     }
 
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    footer section {
+        width: 30%;
+        margin: 1%;
+    }
+
+    footer section.copyright {
+        width: 100%;
+        text-align: left;
+    }
 }
 
 /* pc */
