@@ -352,14 +352,16 @@ footer section.copyright {
     }
 
     main section article .description{
-        color: #FFF;
+        opacity: 0;
         display: block;
-        transition-property: color;
+        width: 100%;
+        transition-property: opacity;
         transition-duration: 0.5s;
+        color: #666;
     }
 
     main section article .description:hover {
-        color: #666;
+        opacity: 1;
     }
 
     main section article:hover {
