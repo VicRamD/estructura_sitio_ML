@@ -40,9 +40,9 @@
             </ul>
             <br>
             <ul>
-                <li><a href="/register">Creá tu cuenta </a><i class="fas fa-id-card"></i></li>
-                <li><a href="/login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="#">Mis cuentas </a><i class="fas fa-shopping-basket"></i></li>
+                <li><a href="/register">Creá tu cuenta <i class="fas fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#">Mis cuentas <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
         <div class="burger-menu">
@@ -50,15 +50,15 @@
         </div>
     </header>
     <main>
-       <form action="/" method="post">
+       <form class="login" action="/" method="post">
         <div class="form-group">
-            <label for="usuario">Nombre de Usuario</label>
+            <label for="usuario">Nombre de Usuario:</label>
             <input id="usuario" name="usuario" type="text">
         </div>       
 
         <div class="form-group">
-            <label for="confirmacion">Repita la Contraseña</label>
-            <input type="password" name="confirmacion">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
         </div>
             <button type="submit" class="confirmar">Confirmar</button>
        </form>

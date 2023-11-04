@@ -34,6 +34,9 @@ header, footer, main {
 div.top-header{
     width: 100%;
    /* padding: 5%;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 header {
@@ -47,6 +50,7 @@ header div.logo{
 
 header div.form {
     display: flex;
+    width: 50%;
 }
 
 

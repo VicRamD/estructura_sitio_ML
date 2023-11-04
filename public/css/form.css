@@ -27,6 +27,47 @@ input[type="radio"], input[type="checkbox"] {
     width: auto;
 }
 
+.selecciones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selecciones input{
+    width: 5%;
+}
+
+.selecciones label{
+    width: 90%;
+    text-align: left;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ebebeb;
+    border: solid 2px #1259c3;
+}
+
 button.confirmar:hover {
     background-color: #0022AA;
+}
+
+.selecciones label.encabezado-seleccion {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 60%;
+    }
 }
