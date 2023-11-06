@@ -11,7 +11,7 @@ const port = process.env.PORT || 3030
 
 server.listen(port, () => {
     /*console.log(`Servidor corriendo en http://localhost:3030/`); */
-    console.log(`Servidor corriendo en ${port}`);
+    console.log(`Servidor corriendo en http://localhost:${port}/`);
 });
 
 server.get('/', (req, res) => {
