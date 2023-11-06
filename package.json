@@ -4,8 +4,8 @@
   "description": "Micro desafios de practica integradora",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js",
-    "start": "node --watch app.js"
+    "test": "node --watch app.js",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
