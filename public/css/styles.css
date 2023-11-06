@@ -318,7 +318,7 @@ footer section.copyright {
 -
 */
 
-/*Phones and Small Tablets*/
+/*Phones*/
 @media (min-width: 361px){
     /*header*/
     .top-header {
@@ -385,7 +385,7 @@ footer section.copyright {
     
 }
 
-/*Big Tablets and Desktops*/
+/*Tablets and Desktops*/
 @media (min-width: 769px){
     /*header*/
     header nav {
