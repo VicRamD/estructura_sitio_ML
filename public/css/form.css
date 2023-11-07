@@ -54,6 +54,7 @@ button[type="submit"] {
 
 button.confirmar:hover {
     background-color: #0022AA;
+    color: #ebebeb;
 }
 
 .selecciones label.encabezado-seleccion {
