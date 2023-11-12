@@ -6,6 +6,7 @@ const server = express();
 
 const pathPublic = path.join(__dirname, '/public');
 
+server.set('view engine', 'ejs');
 server.use(express.static(pathPublic));
 
 const port = process.env.PORT || 3030
