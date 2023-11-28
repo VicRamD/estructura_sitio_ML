@@ -175,6 +175,7 @@ main {
 
 main section a.product-card{
     width: 100%;
+    text-decoration: none;
 }
 
 main section article{

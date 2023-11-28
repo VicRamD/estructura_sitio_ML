@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -10,6 +15,7 @@ form {
     border: solid 2px #666;
     border-radius: 5px;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 .form-group {
@@ -52,7 +58,7 @@ button[type="submit"] {
     border: solid 2px #1259c3;
 }
 
-button.confirmar:hover {
+button.confirmar:hover, button.guardar-producto:hover {
     background-color: #0022AA;
     color: #ebebeb;
 }
@@ -66,10 +72,42 @@ div.login {
     margin: 15px 0px;
 }
 
+/* ================== */
+.form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+  }
+  
+  textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+  }
+
+  h2.products-title {
+    width: 100%;
+    text-align: center;
+  }
+
+/* ================== */
+
+
+
 @media (min-width: 769px) {
     main {
         display: flex;
         justify-content: center;
+    }
+
+    form {
+        width: 50%;
     }
 
     form.login {
