@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
 const mainRoutes = require('./routes/main');
+const productsRoutes = require('./routes/products')
 
 const server = express();
 
+console.log(__dirname);
 const pathPublic = path.join(__dirname, '/public');
 
 server.set('view engine', 'ejs');
@@ -16,4 +18,6 @@ server.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}/`);
 });
 
-server.use('', mainRoutes);
+server.use('/', mainRoutes);
+server.use('/products', productsRoutes);
+

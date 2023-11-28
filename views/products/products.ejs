@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<%- include('../partials/partialHead') %>
+	<title>Mercado Liebre</title>
+</head>
+<body>
+	<!-- Header -->
+	<%- include('../partials/header') %>
+	<!-- /Header -->
+
+	
+	<main>
+		<!-- todos los productos -->
+		<section class="offers">
+			<h3 class="products-title">Todos los productos</h3>
+			<div class="products">
+				<% products.forEach(product => { %>	
+					<article>
+						<a href="/products/<%= product.id %>" class="product-card">
+							<img src="/images/products/<%= product.image %>" alt="imagen de producto" class="product_img">
+							<div class="main-article product-desc-box">
+								<i class="fas fa-truck product-delivery-icon"></i>
+								<p class="price">$<%= product.price %></p2>
+								<p class="discount"><%= product.discount %> % OFF</p>
+								<h4 class="description"><%= product.name %></h4>		
+							</div>
+						</a>
+					</article>		
+				<% }) %>
+			</div>
+		</section>
+		<!-- /todos los productos -->
+	</main>
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

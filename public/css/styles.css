@@ -57,6 +57,7 @@ header div.form {
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
+    border-right: 0px;
     outline: none;
     color: #666;
     padding: 2px;
@@ -70,10 +71,23 @@ header .form .submit{
     align-items: center;
     background-color: #FFF;
     border: 1px solid #000;
+    border-left: 0px;
     color: #666;
     width: 10%;
     height: 40px;
+    transition: background-color, 0.5s;
+
 }
+
+header .form .submit:hover{
+    border-left: 1px solid #000;
+    background-color: #1259c3;
+}
+
+header .form .submit:hover i{
+    color: #ebebeb;
+}
+
 
 header div.top-header p{
     width: 100%;
@@ -157,6 +171,10 @@ section.banner img{
 main {
     margin: 0 auto;
     width: 90vw;
+}
+
+main section a.product-card{
+    width: 100%;
 }
 
 main section article{
@@ -415,7 +433,7 @@ footer section.copyright {
     }
 
     header .form .input{
-        width: 80%;
+        width: 90%;
     }
 
     header nav {

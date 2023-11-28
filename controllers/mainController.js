@@ -1,12 +1,12 @@
 const controladorMain = {
     index: (req, res) => {
-        res.render('index');
+        res.render('main/index');
     },
     login: (req, res) => {
-        res.render('login');
+        res.render('main/login');
     },
     register: (req, res) => {
-        res.render('register');
+        res.render('main/register');
     },
 }
 
