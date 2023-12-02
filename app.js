@@ -1,15 +1,19 @@
 const express = require('express');
+const methodOverride =  require('method-override');
 const path = require('path');
 const mainRoutes = require('./routes/main');
 const productsRoutes = require('./routes/products')
 
 const server = express();
-
-console.log(__dirname);
 const pathPublic = path.join(__dirname, '/public');
 
-server.set('view engine', 'ejs');
+//==============Middlewares==========================/
 server.use(express.static(pathPublic));
+server.use(express.urlencoded({ extended: false }));
+server.use(express.json());
+server.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
+server.set('view engine', 'ejs');
 
 const port = process.env.PORT || 3030
 

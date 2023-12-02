@@ -8,6 +8,9 @@ const controladorMain = {
     register: (req, res) => {
         res.render('main/register');
     },
+    store: (req, res) => {
+        
+    },
 }
 
 module.exports = controladorMain;

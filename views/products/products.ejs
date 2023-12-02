@@ -18,7 +18,7 @@
 				<% products.forEach(product => { %>	
 					<article>
 						<a href="/products/<%= product.id %>" class="product-card">
-							<img src="/images/products/<%= product.image %>" alt="imagen de producto" class="product_img">
+							<img src="/images/products/<%= product.image ? product.image : 'default-image.png' %>" alt="imagen de producto" class="product_img">
 							<div class="main-article product-desc-box">
 								<i class="fas fa-truck product-delivery-icon"></i>
 								<p class="price">$<%= product.price %></p2>

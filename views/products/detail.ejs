@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+	<%- include('../partials/partialHead') %>
+	<title>Detalle - <%= product.id %></title>
+</head>
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Detalle ' + product.id}) %> 
 <body>
 	<!-- Header -->
-	<%- include('partials/headerNavbar') %>
+	<%- include('../partials/header') %>
 	<!-- /Header -->
-
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="row">
@@ -17,7 +19,7 @@
 		<div class="product-detail">
 			<div class="row">
 				<div class="col-12 col-lg-8">
-					<img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
+					<img src="/images/products/<%= product.image ? product.image : 'default-image.png' %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
 						<%= product.description %>
 					</p>
@@ -55,9 +57,9 @@
 						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
 						<hr>
 
-						<a href="/products/<%= product.id %>/edit/" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/delete/" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+						<a href="/products/<%= product.id %>/edit/">EDITAR PRODUCTO</a>
+						<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+							<button type="submit">ELIMINAR</button>
 						</form>
 					</article>
 				</div>
@@ -67,7 +69,7 @@
 	<!-- /product detail -->
 
 	<!-- footer -->
-	<%- include('partials/footer') %>
+	<%- include('../partials/footer') %>
 	<!-- /footer -->
 
 </body>	

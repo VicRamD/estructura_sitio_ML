@@ -123,6 +123,11 @@ nav ul li a {
     color: #000;
 }
 
+nav ul li a:hover {
+    color: #1259c3;
+}
+
+
 /*
 p.lupa{
     display: inline;
@@ -380,6 +385,10 @@ footer section.copyright {
     }
 
     main section article .description:hover {
+        opacity: 1;
+    }
+
+    main section article:hover .description {
         opacity: 1;
     }
 
